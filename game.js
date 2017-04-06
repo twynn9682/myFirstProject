@@ -5,6 +5,8 @@ window.onload = function() {
     var scoreText;
     var witches;
     var lastWitch = new Date();
+    // This is to help with lag.
+    game.forceSingleUpdate = true;
 
     function preload() {
         game.load.image('sky', 'assets/sky.png');
