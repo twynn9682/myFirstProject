@@ -35,7 +35,7 @@ var mainState = {
         this.cursor = game.input.keyboard.createCursorKeys();
 
         // Create the player in the middle of the game
-        this.player = game.add.sprite(70, 100, 'player');
+        this.player = game.add.sprite(150, 100, 'player');
 
         // Add gravity to make it fall
         this.player.body.gravity.y = 600;
@@ -47,13 +47,38 @@ var mainState = {
 
         // Design the level. x = wall, o = coin, ! = lava.
         var level = [
-            'xxxxxxxxxxxxxxxxxxxxxx',
-            '!         !          x',
-            '!                 o  x',
-            '!         o          x',
-            '!                    x',
-            '!     o   !    x     x',
-            'xxxxxxxxxxxxxxxx!!!!!x',
+            '   xxxxxxxxxxxxxxxxxxxxxx',
+            '   !         !          x',
+            '   !                 o  x',
+            '   !         o          xxx',
+            '   !                      x',
+            '   !     o   !    x     x x',
+            '   xxxxxxxxxxxxxxxx!!!!!x x',
+            '   xxxxxxxxxxxxxxxxxxxxxx x',
+            '   !         !          x x',
+            '   !                 o  x x',
+            '   !         o          x x',
+            ' !!!                      x',
+            ',x     o     !    x     xxx',
+            ',x xxxxxxxxxxxxxxxx!!!!!x',
+            ',x xxxxxxxxxxxxxxxxxxxxxx',
+            ',x !         !          x',
+            ',x !                 o  x',
+            ',x !         o          xxx',
+            ',x !                      x',
+            ',x        o  !  x       x x',
+            ' xxxxxxxxxxxxxxxx!!!!!!!x x',
+            ',xxxxxxxxxxxxxxxxxxxxxxxx x',
+            ',!                     !x x',
+            ',!                     !x x',
+            ',!          xx         !x x',
+            ',!    xx               !x x',
+            ',!o              xx     x x',
+            ',!xx                      x',
+            ',!                     xxxx',
+            ',!!!!!!!!!!!!!!!!!!!!!!!!!!',
+
+
 
         ];
 
@@ -116,6 +141,6 @@ var mainState = {
 
 
 
-var game = new Phaser.Game(500, 200);
+var game = new Phaser.Game(600, 700);
 game.state.add('main', mainState);
 game.state.start('main');
